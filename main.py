@@ -4,12 +4,37 @@ def get_budget():
     budget = float(input("Enter your monthly budget: "))
     return budget
 
+def assign_category(expense_name):
+    if expense_name.lower() in ["rent", "mortgage"]:
+        return "Housing"
+    elif expense_name.lower() in ["electricity", "water", "gas", "internet", "phone", "lyca","council tax"]:
+        return "Utilities"
+    elif expense_name.lower() in ["groceries", "eating out", "takeout", "huel"]:
+        return "Food"
+    elif expense_name.lower() in ["bus", "train", "taxi", "car", "flight", "fuel"]:
+        return "Transportation"
+    elif expense_name.lower() in ["movie", "netflix", "spotify", "youtube", "books", "amazon prime", "games"]:
+        return "Entertainment"
+    elif expense_name.lower() in ["trip", "vacation", "holiday", "hotel", "tourism", "museum", "excursion"]:
+        return "Tourism/Travel"
+    elif expense_name.lower() in ["clothes", "shoes", "accessories", "cosmetics", "jewelry", "perfume"]:
+        return "Shopping"
+    elif expense_name.lower() in ["school lunch", "tuition", "uniform", "school supplies"]:
+        return "Education/Childcare"
+    elif expense_name.lower() in ["capital one", "lloyds", "next", "currys", "argos", "zopa", "sainsburys", "tesco"
+                                  , "rate setter", "klarna"]:
+        return "Debts/Loans"
+    elif expense_name.lower() in ["tools", "paint", "wood", "screws", "nails", "plumbing", "electrics", "repairs",
+                                  "furniture"]:
+        return "Home Improvement/Repairs"
+    else:
+        return "Other"
+
 def add_expenses():
     expenses = []
     while True:
         expense_name = input("Enter the expense name (or type 'done' to finish): ")
         if expense_name.lower() == 'done':
-            print(f"Exiting the program...")
             break
         elif not expense_name.strip():
             print(f"Please enter a valid expense name.")
@@ -24,7 +49,17 @@ def add_expenses():
                     print("Invalid date format. Please use YYYY-MM-DD.")
                     continue
 
-                expenses.append((expense_name, expense_amount, expense_date))
+                available_categories = ["Housing", "Utilities", "Food", "Transportation", "Other"]
+
+                expense_category = assign_category(expense_name)
+                if expense_category == "Other":
+                    print("Could not assign a category. Please enter a category for this expense.")
+                    print(", ".join(available_categories))  # Display available categories
+                    expense_category = input("Enter the category for this expense (or press Enter to choose 'Other'): ")
+                    if not expense_category.strip():
+                        expense_category = "Other"
+
+                expenses.append((expense_name, expense_amount, expense_date, expense_category))
             except ValueError:
                 print(f"Incorrect input. Please enter a valid number.")
                 continue
@@ -41,7 +76,7 @@ def display_summary(budget, expenses):
 
     print("\n--- Budget summary ---")
     for expense in expenses_sorted:
-        print(f"{expense[2]} - {expense[0]}: £{expense[1]:.2f}")    # Date - Expense name: £Amount
+        print(f"{expense[2]} - {expense[0]}: £{expense[1]:.2f} (Category: {expense[3]})")
     print(f"\nTotal expenses: £{total_expenses:.2f}")
     print(f"Remaining budget: £{remaining_budget:.2f}")
 
