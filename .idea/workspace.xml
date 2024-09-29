@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b53b9050-241e-4d87-af06-dc40ae95bbb8" name="Changes" comment="Restructured the application: Separated the logic into modules (budget, expenses, debts, categories) and implemented main menu system (for the console).">
-      <change afterPath="$PROJECT_DIR$/data_manager.py" afterDir="false" />
+    <list default="true" id="b53b9050-241e-4d87-af06-dc40ae95bbb8" name="Changes" comment="Added data managing logic (save and load using json).">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -54,6 +53,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Python.data_manager.executor&quot;: &quot;Run&quot;,
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;development&quot;,
@@ -69,14 +69,15 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Gytis\Desktop\Projects\budget_management\data" />
       <recent name="C:\Users\Gytis\Desktop\Projects\budget_management" />
     </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.22855.92" />
-        <option value="bundled-python-sdk-b068d85d1acf-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.22855.92" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PY-242.23339.19" />
+        <option value="bundled-python-sdk-0029f7779945-399fe30bd8c1-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-242.23339.19" />
       </set>
     </attachedChunks>
   </component>
@@ -92,7 +93,10 @@
       <workItem from="1726740366813" duration="11988000" />
       <workItem from="1726824948019" duration="4733000" />
       <workItem from="1726831916446" duration="3255000" />
-      <workItem from="1726835771635" duration="2789000" />
+      <workItem from="1726835771635" duration="3821000" />
+      <workItem from="1726906518811" duration="4323000" />
+      <workItem from="1727086585338" duration="5450000" />
+      <workItem from="1727601977199" duration="1040000" />
     </task>
     <task id="LOCAL-00001" summary="Created a basic budget calculator.">
       <option name="closed" value="true" />
@@ -150,7 +154,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726835407798</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added data managing logic (save and load using json).">
+      <option name="closed" value="true" />
+      <created>1726839927324</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1726839927324</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,9 +198,11 @@
     <MESSAGE value="Added categories." />
     <MESSAGE value="Added savings goal." />
     <MESSAGE value="Restructured the application: Separated the logic into modules (budget, expenses, debts, categories) and implemented main menu system (for the console)." />
-    <option name="LAST_COMMIT_MESSAGE" value="Restructured the application: Separated the logic into modules (budget, expenses, debts, categories) and implemented main menu system (for the console)." />
+    <MESSAGE value="Added data managing logic (save and load using json)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added data managing logic (save and load using json)." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/budget_management$main.coverage" NAME="main Coverage Results" MODIFIED="1726836857695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/budget_management$main.coverage" NAME="main Coverage Results" MODIFIED="1727091290472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/budget_management$data_manager.coverage" NAME="data_manager Coverage Results" MODIFIED="1726839519318" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -1,0 +1,43 @@
+{
+    "budget": 1200.0,
+    "savings_goal": 200.0,
+    "expenses": [
+        [
+            "rent",
+            450.0,
+            "2024-09-22",
+            "Housing"
+        ],
+        [
+            "council tax",
+            86.0,
+            "2024-10-01",
+            "Utilities"
+        ],
+        [
+            "butcher",
+            33.5,
+            "2024-09-20",
+            "Food"
+        ],
+        [
+            "groceries",
+            29.25,
+            "2024-09-20",
+            "Food"
+        ],
+        [
+            "electricity",
+            10.0,
+            "2024-09-19",
+            "Utilities"
+        ],
+        [
+            "electricity",
+            50.0,
+            "2024-09-20",
+            "Utilities"
+        ]
+    ],
+    "debts": []
+}
